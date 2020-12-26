@@ -11,12 +11,12 @@ h1 {
   margin-top: 0%; }
 
 #entete {
-  background-color: rgba(236, 236, 236, 0.4);
+  background-color: #ececec;
   text-align: center;
   padding-bottom: 10%; }
 
 .localisation {
-  box-shadow: inset 0px 2px 2px rgba(173, 173, 173, 0.6);
+  box-shadow: inset 0px 2px 2px #adadad;
   font-size: 5vw;
   margin-top: 2%;
   background-color: rgba(185, 184, 184, 0.5);
@@ -54,14 +54,26 @@ h1 {
   font-weight: bold;
   display: flex; }
 
+.fonction li .fa {
+  padding-top: 6%;
+  margin-left: 6%;
+  margin-right: 6%; }
+
+.fonction li .fas {
+  padding-top: 6%;
+  margin-left: 6%;
+  margin-right: 6%; }
+
 .fonction .number {
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
   border-radius: 100%;
   text-align: center;
   color: white;
   background-color: #9356DC;
-  margin-left: -8px; }
+  margin-left: -14px;
+  font-size: 0.9em;
+  padding: 1%; }
 
 .fonction ol {
   padding: 0%; }
@@ -76,7 +88,7 @@ li .fa {
 
 img {
   width: 100%;
-  height: 200px;
+  height: 300px;
   border-radius: 10px 10px 0% 0%;
   object-fit: cover; }
 
@@ -90,16 +102,25 @@ figure {
   figure .new {
     position: absolute;
     float: right;
-    top: 10px;
-    right: 10px;
+    top: 15px;
+    right: 15px;
     background-color: #99E2D0;
     color: green;
-    padding: 1%; }
+    padding: 1%;
+    font-size: 5vw; }
   figure .fa-heart {
     position: absolute;
     right: 5%;
     bottom: 7%;
-    font-size: 5vw; }
+    font-size: 5vw;
+    font-weight: 500;
+    color: #494949; }
+
+.fa-heart:hover {
+  font-weight: 900;
+  background: linear-gradient(to top, #e72c83 0%, #a742c6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; }
 
 #Restaurants {
   background-color: rgba(236, 236, 236, 0.6);
@@ -134,7 +155,8 @@ footer {
   footer h4 {
     padding-top: 15px;
     margin-top: 0;
-    padding-left: 6%; }
+    padding-left: 6%;
+    font-size: 4vw; }
   footer .fa-hands-helping {
     margin-right: 2px;
     padding-top: 0; }
@@ -142,4 +164,116 @@ footer {
     padding-left: 6%;
     padding-bottom: 8%; }
     footer ul li {
-      list-style-type: none; }
+      list-style-type: none;
+      font-size: 3vw;
+      margin-bottom: 2%; }
+
+/*#region Menu*/
+.menu {
+  display: table; }
+
+.menu a {
+  text-decoration: none;
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 7VW;
+  color: black;
+  padding-right: 18%; }
+
+.fa-arrow-left {
+  margin-left: 50%; }
+
+#images_menu img {
+  border-radius: inherit; }
+
+#titre {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 3%;
+  margin-right: 3%; }
+
+.propositions {
+  background-color: #ececec;
+  border-radius: 30px 30px 0px 0px;
+  position: relative;
+  top: -45px;
+  z-index: 1; }
+
+.propositions h2 {
+  font-size: 5vw; }
+
+.propositions i {
+  font-size: 5vw;
+  padding-right: 2%; }
+
+.propositions li {
+  background-color: white;
+  position: relative;
+  list-style-type: none;
+  border-radius: 20px;
+  border-right: 0vw solid #99E2D0; }
+  .propositions li .prix {
+    position: absolute;
+    right: 4%;
+    bottom: 10px;
+    margin: 0;
+    font-size: 3vw;
+    font-weight: bold; }
+
+.propositions ul {
+  margin-right: 2%;
+  padding-left: 2%; }
+
+.propositions h3 {
+  padding-left: 2%;
+  font-size: 4vw; }
+
+.propositions h4 {
+  padding-top: 2%;
+  margin-bottom: 1%;
+  font-size: 4vw; }
+
+.propositions .descriptif {
+  padding-bottom: 10px;
+  margin-left: 2%;
+  font-size: 3vw;
+  margin-top: 0; }
+
+.propositions .intitule {
+  margin-left: 2%; }
+
+.bouton_deux {
+  background-image: linear-gradient(#FF79DA 35%, #9356DC);
+  border: 0px solid;
+  border-radius: 50px;
+  color: white;
+  font-size: 5vw;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-left: 8%;
+  padding-right: 8%;
+  margin-top: 10%;
+  margin-bottom: 20%;
+  margin-left: 25%; }
+
+.propositions li:hover {
+  border-right: 15vw solid #99E2D0;
+  transition-duration: 500ms;
+  position: relative; }
+
+li:hover .far.fa-check-circle {
+  visibility: visible;
+  color: white;
+  transform: rotate(360deg);
+  transform-origin: 50% 50%; }
+
+.far.fa-check-circle {
+  position: absolute;
+  right: -15%;
+  bottom: 28%;
+  visibility: hidden;
+  transition: transform 600ms;
+  transform: rotate(0); }
+
+/*#endregion Menu*/
