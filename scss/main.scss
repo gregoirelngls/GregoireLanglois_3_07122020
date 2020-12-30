@@ -1,16 +1,96 @@
 $color-primary:#9356DC;
 $color-secondary:#FF79DA;
 $color-tertiary:#99E2D0;
+$link-color:linear-gradient(#FF79DA 35%, #9356DC);
 
+@import "./Utils/_mixins.scss";
+@import "./Layout/footer";
+@import "./Layout/header";
 
 body{
     font-family: 'Roboto', arial, serif;
+    margin:0;
 }
   
 .police{
     font-family: 'Shrikhand', arial, serif;
 }
-  
+
+#section_principale{
+    animation: 3s fadeIn;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+}
+
+@keyframes fadeIn{
+    99% {
+        visibility: hidden;
+    }
+    100% {
+        visibility: visible;
+        height:100%;
+    }
+}
+
+#section_chargement{
+    background-color: $color-tertiary;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position:absolute;
+    width: 100vw;
+    animation: 3s fadeOut;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+    p{
+        color:white;
+        padding-left:3%;
+        font-size:6vw;
+    }
+}
+
+.loader{
+    width:50px;
+    height:50px;
+    display:inline-block;
+    vertical-align: middle;
+    position:relative;
+    border-radius: 50px;
+    border:6px solid rgba(255,255,255, 0.4)
+}
+
+.loader:after{
+    content:'';
+    position:absolute;
+    top:-6px;
+    bottom:-6px;
+    right:-6px;
+    left:-6px;
+    border-radius:50px;
+    border:6px solid transparent;
+    border-top-color:#fff;
+    animation:spin 1.5s ease-in-out 3;
+}
+
+@keyframes spin{
+    0% {transform: rotate(0deg);}
+    99% {visibility: hidden;}
+    100%{transform : rotate(360deg);}
+    100% {visibility: visible;}
+}
+
+@keyframes fadeOut{
+    99% {
+        visibility: visible;
+      }
+      100% {
+        visibility: hidden;
+        height:0%;
+        width:0%;
+      }
+}
+ 
 h1{
     text-align:center;
     font-size:10vw;
@@ -51,12 +131,11 @@ h1{
 }
   
 .bouton {
-    background-image: linear-gradient(#FF79DA 35%, #9356DC);
-    border: 0px solid;
-    border-radius: 50px;
-    padding: 3%;
-    color: white;
-    font-size:5vw;
+    @include bouton;
+}
+
+.bouton:hover{
+    @include bouton_hover;
 }
   
 .fonction li {
@@ -67,16 +146,15 @@ h1{
     font-size: 5vw;
     font-weight:bold;
     display:flex;
+    align-items:center;
 }
 
 .fonction li .fa{
-    padding-top: 6%;
     margin-left: 6%;
     margin-right: 6%;
 }
 
 .fonction li .fas{
-    padding-top: 6%;
     margin-left: 6%;
     margin-right: 6%;
 }
@@ -89,7 +167,7 @@ h1{
     color: white;
     background-color: #9356DC;
     margin-left: -14px;
-    font-size: 0.9em;
+    font-size: 24px;
     padding: 1%;
 }
 
@@ -140,20 +218,21 @@ margin:4%;
         font-size: 5vw;
         font-weight:500;
         color:rgb(73, 73, 73);
+        transition: 3s ease-out opacity;
+        background-size : 0%;
+        &:hover{
+            content:"\f004";
+            font-weight:900;
+            background: linear-gradient(to top, #e72c83 0%,#a742c6 100%);
+            -webkit-background-clip:text;
+            -webkit-text-fill-color:transparent;
+        }
     }
 }
 
-.fa-heart:hover{
-    font-weight:900;
-    background: linear-gradient(to top, #e72c83 0%,#a742c6 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color:transparent;
-   }
-
-
 #Restaurants{
     background-color:rgba(236, 236, 236, 0.6);
-    padding-bottom: 5%;
+    padding-bottom: 15%;
 }
 
 #Restaurants figcaption{
@@ -183,10 +262,16 @@ margin:4%;
     font-size:4vw;
     padding-bottom:1%;
 }
+
+li a{
+    text-decoration:none;
+    color:white;
+}
   
-  
+@import "./Utils/_mixins.scss";
 @import "./Layout/footer";
 @import "./Layout/header";
+
 
   
 /*#region Menu*/
@@ -280,11 +365,7 @@ margin:4%;
 }
 
 .bouton_deux{
-    background-image: linear-gradient(#FF79DA 35%, #9356DC);
-    border: 0px solid;
-    border-radius: 50px;
-    color: white;
-    font-size:5vw;
+    @include bouton;
     padding-top:2%;
     padding-bottom:2%;
     padding-left:8%;
@@ -294,7 +375,13 @@ margin:4%;
     margin-left: 25%;
 }
 
+.bouton_deux:hover{
+    background: linear-gradient(to bottom, lighten($color-secondary, 5%), lighten($color-primary, 5%));
+    box-shadow:0px 4px 15px grey;
+}
+
 .propositions li:hover{
+    padding-right: 0.5rem;
     border-right: 15vw solid $color-tertiary;
     transition-duration:500ms;
     position:relative;
@@ -304,7 +391,7 @@ li:hover .far.fa-check-circle{
     visibility: visible;
     color:white;
     transform:rotate(360deg);
-    transform-origin: 50% 50%;
+    transform-origin: 40% 50%;
 }
 
 .far.fa-check-circle{

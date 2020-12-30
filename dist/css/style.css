@@ -1,8 +1,97 @@
+footer {
+  background-color: #303030;
+  color: white;
+  position: relative;
+  bottom: 45px; }
+  footer h4 {
+    padding-top: 15px;
+    margin-top: 0;
+    padding-left: 6%;
+    font-size: 4vw; }
+  footer .fa-hands-helping {
+    margin-right: 2px;
+    padding-top: 0; }
+  footer ul {
+    padding-left: 6%;
+    padding-bottom: 8%; }
+    footer ul li {
+      list-style-type: none;
+      font-size: 3vw;
+      margin-bottom: 2%; }
+
 body {
-  font-family: 'Roboto', arial, serif; }
+  font-family: 'Roboto', arial, serif;
+  margin: 0; }
 
 .police {
   font-family: 'Shrikhand', arial, serif; }
+
+#section_principale {
+  animation: 3s fadeIn;
+  animation-fill-mode: forwards;
+  visibility: hidden; }
+
+@keyframes fadeIn {
+  99% {
+    visibility: hidden; }
+  100% {
+    visibility: visible;
+    height: 100%; } }
+
+#section_chargement {
+  background-color: #99E2D0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100vw;
+  animation: 3s fadeOut;
+  animation-fill-mode: forwards;
+  visibility: hidden; }
+  #section_chargement p {
+    color: white;
+    padding-left: 3%;
+    font-size: 6vw; }
+
+.loader {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  border-radius: 50px;
+  border: 6px solid rgba(255, 255, 255, 0.4); }
+
+.loader:after {
+  content: '';
+  position: absolute;
+  top: -6px;
+  bottom: -6px;
+  right: -6px;
+  left: -6px;
+  border-radius: 50px;
+  border: 6px solid transparent;
+  border-top-color: #fff;
+  animation: spin 1.5s ease-in-out 3; }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  99% {
+    visibility: hidden; }
+  100% {
+    transform: rotate(360deg); }
+  100% {
+    visibility: visible; } }
+
+@keyframes fadeOut {
+  99% {
+    visibility: visible; }
+  100% {
+    visibility: hidden;
+    height: 0%;
+    width: 0%; } }
 
 h1 {
   text-align: center;
@@ -43,7 +132,12 @@ h1 {
   border-radius: 50px;
   padding: 3%;
   color: white;
-  font-size: 5vw; }
+  font-size: 5vw;
+  box-shadow: 0px 3px 10px grey; }
+
+.bouton:hover {
+  background: linear-gradient(to bottom, #ff93e1, #a16be0);
+  box-shadow: 0px 4px 15px grey; }
 
 .fonction li {
   margin: 3%;
@@ -52,15 +146,14 @@ h1 {
   list-style-type: none;
   font-size: 5vw;
   font-weight: bold;
-  display: flex; }
+  display: flex;
+  align-items: center; }
 
 .fonction li .fa {
-  padding-top: 6%;
   margin-left: 6%;
   margin-right: 6%; }
 
 .fonction li .fas {
-  padding-top: 6%;
   margin-left: 6%;
   margin-right: 6%; }
 
@@ -72,7 +165,7 @@ h1 {
   color: white;
   background-color: #9356DC;
   margin-left: -14px;
-  font-size: 0.9em;
+  font-size: 24px;
   padding: 1%; }
 
 .fonction ol {
@@ -114,17 +207,19 @@ figure {
     bottom: 7%;
     font-size: 5vw;
     font-weight: 500;
-    color: #494949; }
-
-.fa-heart:hover {
-  font-weight: 900;
-  background: linear-gradient(to top, #e72c83 0%, #a742c6 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; }
+    color: #494949;
+    transition: 3s ease-out opacity;
+    background-size: 0%; }
+    figure .fa-heart:hover {
+      content: "\f004";
+      font-weight: 900;
+      background: linear-gradient(to top, #e72c83 0%, #a742c6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; }
 
 #Restaurants {
   background-color: rgba(236, 236, 236, 0.6);
-  padding-bottom: 5%; }
+  padding-bottom: 15%; }
 
 #Restaurants figcaption {
   background-color: white;
@@ -149,9 +244,15 @@ figure {
   font-size: 4vw;
   padding-bottom: 1%; }
 
+li a {
+  text-decoration: none;
+  color: white; }
+
 footer {
   background-color: #303030;
-  color: white; }
+  color: white;
+  position: relative;
+  bottom: 45px; }
   footer h4 {
     padding-top: 15px;
     margin-top: 0;
@@ -247,8 +348,10 @@ footer {
   background-image: linear-gradient(#FF79DA 35%, #9356DC);
   border: 0px solid;
   border-radius: 50px;
+  padding: 3%;
   color: white;
   font-size: 5vw;
+  box-shadow: 0px 3px 10px grey;
   padding-top: 2%;
   padding-bottom: 2%;
   padding-left: 8%;
@@ -257,7 +360,12 @@ footer {
   margin-bottom: 20%;
   margin-left: 25%; }
 
+.bouton_deux:hover {
+  background: linear-gradient(to bottom, #ff93e1, #a16be0);
+  box-shadow: 0px 4px 15px grey; }
+
 .propositions li:hover {
+  padding-right: 0.5rem;
   border-right: 15vw solid #99E2D0;
   transition-duration: 500ms;
   position: relative; }
@@ -266,7 +374,7 @@ li:hover .far.fa-check-circle {
   visibility: visible;
   color: white;
   transform: rotate(360deg);
-  transform-origin: 50% 50%; }
+  transform-origin: 40% 50%; }
 
 .far.fa-check-circle {
   position: absolute;
