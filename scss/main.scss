@@ -16,11 +16,11 @@ body{
     font-family: 'Shrikhand', arial, serif;
 }
 
-#section_principale{
+ #section_principale{
     animation: 2.5s fadeIn;
     animation-fill-mode: forwards;
     visibility: hidden;
-}
+ }
 
 @keyframes fadeIn{
     99% {
@@ -38,11 +38,13 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    position:absolute;
+    position:fixed;
+    left:0;
+    top:0;
     width: 100vw;
     animation: 3s fadeOut;
     animation-fill-mode: forwards;
-    visibility: hidden;
+    z-index:50;
     p{
         color:white;
         padding-left:3%;
@@ -81,13 +83,11 @@ body{
 }
 
 @keyframes fadeOut{
-    99% {
-        visibility: visible;
+    from{
+        visibility: visible;;
       }
-      100% {
-        visibility: hidden;
-        height:0%;
-        width:0%;
+    to{
+        visibility:hidden;
       }
 }
  
@@ -147,6 +147,7 @@ h1{
     font-weight:bold;
     display:flex;
     align-items:center;
+    box-shadow: 0px 3px 10px grey;
 }
 
 .fonction li .fa{
@@ -228,9 +229,12 @@ margin:4%;
         bottom: 7%;
         font-size: 5vw;
         font-weight:500;
-        color:rgb(73, 73, 73);
-        transition: 3s ease-out opacity;
+        // color:rgb(73, 73, 73);
+        transition: all 3s ease-in ;
         background-size : 0%;
+        background:rgb(73, 73, 73);
+        -webkit-background-clip:text;
+        -webkit-text-fill-color:transparent;
         &:hover{
             content:"\f004";
             font-weight:900;
@@ -341,13 +345,22 @@ li a{
     list-style-type: none;
     border-radius:20px;
     border-right: 0vw solid #99E2D0;
+    display:grid;
+    grid-template-rows: 50 50;
+    grid-template-columns:6fr 1fr;
+    margin-bottom:3%;
+    box-shadow: 0px 3px 10px grey;
+    overflow:hidden;
     .prix{
-        position:absolute;
-        right:4%;
-        bottom:10px;
-        margin:0;
+        margin:10px;
         font-size:3vw;
         font-weight: bold;
+        grid-row-start: 2;
+        grid-row-end:3;
+        grid-column-start:2;
+        grid-column-end:3;
+        display:flex;
+        justify-content: center;
    }
 }
 
@@ -368,16 +381,30 @@ li a{
 }
 
 .propositions h4{
-    padding-top:2%;
     margin-bottom:1%;
-    font-size:4vw;
+    font-size:5vw;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    grid-row-start: 1;
+    grid-row-end:2;
+    grid-column-start:1;
+    grid-column-end:2;
+    margin-top: 5px;
 }
 
 .propositions .descriptif{
-    padding-bottom:10px;
+    margin-bottom: 1%;
+    font-size: 4vw;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    margin-top: 5px;
     margin-left:2%;
-    font-size: 3vw;
-    margin-top: 0;
 }
 
 .propositions .intitule{
@@ -405,6 +432,7 @@ li a{
     border-right: 15vw solid $color-tertiary;
     transition-duration:500ms;
     position:relative;
+    overflow:visible;
 }
 
 li:hover .far.fa-check-circle{
@@ -452,35 +480,62 @@ li:hover .far.fa-check-circle{
     #section_media{
       display:flex;
       flex-direction:row;
+      padding-left: 1%;
+      padding-right: 1%;
+      padding-bottom: 4%;
     }
 
     .localisation{
-        margin-top:0;
+        box-shadow: none;
+        font-size: 5vw;
+        border-top: none;
+        i{
+            font-size:3vw;
+        }
     }
 
     #entete{
         width:50%;
-        background-color:white;
+        background-color:rgba(236, 236, 236, 0.4);
+        border-radius:5%;
+        box-shadow: 0px 3px 10px;
         h2{
             font-size:4vw;
         }
         p, .bouton{
             font-size:3vw;
+            margin-top:3%;
         }
     }
 
     #fonctionnement{
         margin-left:3%;
         width:50%;
+        background-color:rgba(236, 236, 236, 0.4);
+        border-radius: 5%;
+        padding-left: 1%;
+        box-shadow: 0px 3px 10px;
         h3{
             font-size:3vw;
             display:flex;
             justify-content:center;
+            margin-top:3%;
         }
 }
 
     .fonction p, i{
         font-size:3vw;
+    }
+
+    .fonction li{
+        background-color:$color-tertiary;
+        box-shadow: 0px 1px 4px;
+        margin-bottom: 5%;
+    }
+
+    #violet{
+        background-color:$color-tertiary;
+        box-shadow: 0px 1px 4px;
     }
 
     #section_media2{
@@ -523,14 +578,204 @@ li:hover .far.fa-check-circle{
         grid-column-end:3;
     }
 
-    #Restaurants a{
+
+#Restaurants{
+    margin-left: 1%;
+    margin-right: 1%;
+    h3{
+        padding-top: 20px;
+        margin-left: 4%;
+        margin: 2%;
+        font-size: 5vw;
+    }
+    a{
         width:100%;
     }
 }
 
-@media (min-width:801px) {
+figcaption h4{
+    font-size:4vw;
+    p{
+        font-size:3vw;
+    }
+    i{
+        font-size:3vw;
+    }
+}
 
+@media (min-width:1024px) {
+
+    #section_media{
+        display:flex;
+        flex-direction:column;
+    }
+
+    h1{
+        font-size: 8vw;
+        margin-bottom: 2%;
+        margin-top: 0%;
+    }
+
+    #entete{
+        width:100%;
+        padding-bottom:3%;
+        border-radius:30px;
+        margin-bottom:6%;
+        .localisation{
+            font-size: 3vw;
+            margin-top: 0;
+            border-radius: 25px 25px 0 0;
+        }
+        .bouton{
+            padding:2%;
+        }
+    }
+
+    #fonctionnement{
+        width: 99%;
+        margin-left: 0;
+        margin-right: 2%;
+        border-radius: 25px;
+        padding-left: 0;
+        h3{
+            margin-top: 0%;
+            margin-bottom: 1%;
+            margin-left: 0;
+            padding-left: 0;
+            padding-top: 1%;
+            padding-bottom: 1%;
+            background-color: rgba(48, 48, 48, 0.123);
+            border-radius: 25px 25px 0 0;
+        }
+        ol{
+            display:flex;
+        }
+        
+    }
+
+    .fonction .number {
+        width: 21%;
+        height: 21%;
+        padding-top: 2%;
+        padding-bottom: 0%;
+        margin-left: -7%;
+    }
+
+    .fonction li:hover{
+        background: darken($color-tertiary, 10%)
+    }
+
+    #violet:hover{
+        background: darken($color-tertiary, 10%)
+    }
+
+    #section_media2 h4{
+        font-size:3vw;
+    }
+
+    #section_media2 .lieu{
+        font-size:2vw;
+    }
+
+    figure .fa-heart{
+        font-size:3vw;
+    }
+
+    #Restaurants h3{
+        font-size:4vw;
+    }
+
+    .far.fa-check-circle {
+        position: absolute;
+        visibility: hidden;
+        transition: transform 500ms;
+        transform: rotate(0);
+        left: -14%;
+        font-size: 2em;
+        top: 30%;
+    }
+
+    .propositions li{
+        width: 80%;
+    }
+
+    .propositions li:hover {
+    padding-right: 0.5rem;
+    border-LEFT: 5vw solid #99E2D0;
+    border-right:none;
+    transition-duration: 500ms;
+    position: relative;
+    }
+
+    li:hover .far.fa-check-circle{
+        visibility: visible;
+        color:white;
+        transform:rotate(360deg);
+        transform-origin: center;
+    }
+    
+    .propositions h4{
+        font-size:1.5em;
+    }
+
+    .propositions h3{
+        font-size:3vw;
+    }
+
+    .propositions h2{
+        font-size:4vw;
+    }
+
+    .propositions i{
+        font-size:4vw;
+    }
+
+    .propositions .descriptif{
+        font-size:1em;
+        align-items: center;
+        display: flex;
+    }
+
+    .propositions  li .prix{
+        font-size:1em;
+        padding-top:14%;
+    }
+
+    .media_3{
+        display:grid;
+        grid-template-rows:100%;
+        grid-template-columns:2fr 2fr 2fr;
+    }
+    
+    #entree{
+        grid-row-start:1;
+        grid-row-end:2;
+        grid-column-start:1;
+        grid-column-end:2;
+    }
+
+    #plats{
+        grid-row-start:1;
+        grid-row-end:2;
+        grid-column-start:2;
+        grid-column-end:3;
+    }
+
+    #desserts{
+        grid-row-start:1;
+        grid-row-end:2;
+        grid-column-start:3;
+        grid-column-end:4;
+    }
+}
+
+.bouton_deux {
+    padding: 2%;
+    font-size: 2vw;
+    margin-left: 39%;
+    margin-bottom:5%;
+    margin-top:0;
 }
 
 
-/*endregion*/
+/*endregion*/}
