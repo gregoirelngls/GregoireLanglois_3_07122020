@@ -1,3 +1,44 @@
+body {
+  font-family: 'Roboto', arial, serif;
+  margin: 0;
+  padding: 1%; }
+
+.police {
+  font-family: 'Shrikhand', arial, serif; }
+
+.bouton {
+  outline-style: none;
+  background-image: linear-gradient(#FF79DA 35%, #9356DC);
+  border: 0px solid;
+  border-radius: 50px;
+  padding: 3%;
+  color: white;
+  font-size: 5vw;
+  box-shadow: 0px 3px 10px grey; }
+  .bouton:active {
+    background: linear-gradient(to bottom, #ff93e1, #a16be0);
+    box-shadow: 0px 4px 15px grey; }
+
+.bouton_deux {
+  background-image: linear-gradient(#FF79DA 35%, #9356DC);
+  border: 0px solid;
+  border-radius: 50px;
+  padding: 3%;
+  color: white;
+  font-size: 5vw;
+  box-shadow: 0px 3px 10px grey;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-left: 8%;
+  padding-right: 8%;
+  margin-top: 10%;
+  margin-bottom: 20%;
+  margin-left: 25%;
+  outline-style: none; }
+  .bouton_deux:active {
+    background: linear-gradient(to bottom, #ff93e1, #a16be0);
+    box-shadow: 0px 3px 10px grey; }
+
 footer {
   background-color: #303030;
   color: white;
@@ -18,13 +59,6 @@ footer {
       list-style-type: none;
       font-size: 3vw;
       margin-bottom: 2%; }
-
-body {
-  font-family: 'Roboto', arial, serif;
-  margin: 0; }
-
-.police {
-  font-family: 'Shrikhand', arial, serif; }
 
 #section_principale {
   animation: 2.5s fadeIn;
@@ -75,7 +109,7 @@ body {
   border-radius: 50px;
   border: 6px solid transparent;
   border-top-color: #fff;
-  animation: spin 1.5s ease-in-out 3; }
+  animation: spin 1.6s ease-in-out 3; }
 
 @keyframes spin {
   0% {
@@ -103,6 +137,13 @@ h1 {
   background-color: #ececec;
   text-align: center;
   padding-bottom: 10%; }
+  #entete h2 {
+    font-size: 8vw;
+    text-align: center;
+    margin-bottom: 0%; }
+  #entete p {
+    color: #383838;
+    font-size: 5vw; }
 
 .localisation {
   box-shadow: inset 0px 2px 2px #adadad;
@@ -112,21 +153,12 @@ h1 {
   padding-top: 1%;
   padding-bottom: 1%;
   border-top: 1px solid grey; }
-
-.localisation i {
-  font-size: 5vW;
-  margin-right: 1%; }
-
-#entete h2 {
-  font-size: 8vw;
-  text-align: center;
-  margin-bottom: 0%; }
-
-#entete p {
-  color: #383838;
-  font-size: 5vw; }
+  .localisation i {
+    font-size: 5vW;
+    margin-right: 1%; }
 
 .bouton {
+  outline-style: none;
   background-image: linear-gradient(#FF79DA 35%, #9356DC);
   border: 0px solid;
   border-radius: 50px;
@@ -134,47 +166,41 @@ h1 {
   color: white;
   font-size: 5vw;
   box-shadow: 0px 3px 10px grey; }
+  .bouton:active {
+    background: linear-gradient(to bottom, #ff93e1, #a16be0);
+    box-shadow: 0px 4px 15px grey; }
 
-.bouton:hover {
-  background: linear-gradient(to bottom, #ff93e1, #a16be0);
-  box-shadow: 0px 4px 15px grey; }
-
-.fonction li {
-  margin: 3%;
-  border-radius: 10px;
-  background-color: rgba(236, 236, 236, 0.4);
-  list-style-type: none;
-  font-size: 5vw;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  box-shadow: 0px 3px 10px grey; }
-
-.fonction li .fa {
-  margin-left: 6%;
-  margin-right: 6%; }
-
-.fonction li .fas {
-  margin-left: 6%;
-  margin-right: 6%; }
-
-.fonction .number {
-  width: 30px;
-  height: 30px;
-  border-radius: 100%;
-  text-align: center;
-  color: white;
-  background-color: #9356DC;
-  margin-left: -14px;
-  font-size: 24px;
-  padding: 1%; }
-
-.fonction ol {
-  padding: 0%; }
-
-li .fa {
-  margin-right: 3%;
-  align-items: center; }
+.fonction {
+  width: 100%; }
+  .fonction ol {
+    padding: 0%; }
+    .fonction ol li {
+      margin: 3%;
+      border-radius: 10px;
+      background-color: rgba(236, 236, 236, 0.4);
+      list-style-type: none;
+      font-size: 5vw;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      box-shadow: 0px 3px 10px grey; }
+      .fonction ol li .fa {
+        margin-left: 7%;
+        margin-right: 5%;
+        align-items: center; }
+      .fonction ol li .fas {
+        margin-left: 7%;
+        margin-right: 5%; }
+      .fonction ol li .number {
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        text-align: center;
+        color: white;
+        background-color: #9356DC;
+        margin-left: -20px;
+        font-size: 24px;
+        padding: 1%; }
 
 #violet {
   background-color: rgba(186, 13, 202, 0.1); }
@@ -183,16 +209,17 @@ li .fa {
 
 #fonctionnement {
   margin-left: 2%; }
-
-#fonctionnement h3 {
-  margin-left: 1%;
-  font-size: 7vw; }
+  #fonctionnement h3 {
+    margin-left: 1%;
+    font-size: 7vw; }
 
 img {
   width: 100%;
   height: 300px;
   border-radius: 10px 10px 0% 0%;
-  object-fit: cover; }
+  object-fit: cover;
+  position: relative;
+  top: 10px; }
 
 figure {
   position: relative;
@@ -216,105 +243,85 @@ figure {
     bottom: 7%;
     font-size: 5vw;
     font-weight: 500;
-    transition: all 3s ease-in;
     background-size: 0%;
     background: #494949;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; }
-    figure .fa-heart:hover {
+    figure .fa-heart:active {
       content: "\f004";
       font-weight: 900;
       background: linear-gradient(to top, #e72c83 0%, #a742c6 100%);
       -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent; }
+      -webkit-text-fill-color: transparent;
+      animation: remplissage 2s; }
+
+@keyframes remplissage {
+  0% {
+    opacity: 0; }
+  99% {
+    opacity: 0.99; }
+  100% {
+    opacity: 1; } }
 
 #Restaurants {
   background-color: rgba(236, 236, 236, 0.6);
   padding-bottom: 15%; }
-
-#Restaurants figcaption {
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px #aaa; }
-
-#Restaurants h3 {
-  padding-top: 20px;
-  margin-left: 4%;
-  font-size: 7vw; }
-
-#Restaurants a {
-  text-decoration: none;
-  color: black; }
-
-#Restaurants h4 {
-  margin-left: 2%;
-  font-size: 5vw; }
-
-#Restaurants .lieu {
-  margin-left: 2%;
-  font-size: 4vw;
-  padding-bottom: 1%; }
+  #Restaurants h3 {
+    padding-top: 20px;
+    margin-left: 4%;
+    font-size: 7vw; }
+  #Restaurants a {
+    text-decoration: none;
+    color: black; }
+  #Restaurants figcaption {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 3px 10px grey; }
+    #Restaurants figcaption h4 {
+      margin-left: 2%;
+      font-size: 5vw;
+      padding-top: 2%; }
+    #Restaurants figcaption .lieu {
+      margin-left: 2%;
+      font-size: 4vw;
+      padding-bottom: 1%; }
 
 li a {
   text-decoration: none;
   color: white; }
 
-footer {
-  background-color: #303030;
-  color: white;
-  position: relative;
-  bottom: 45px; }
-  footer h4 {
-    padding-top: 15px;
-    margin-top: 0;
-    padding-left: 6%;
-    font-size: 4vw; }
-  footer .fa-hands-helping {
-    margin-right: 2px;
-    padding-top: 0; }
-  footer ul {
-    padding-left: 6%;
-    padding-bottom: 8%; }
-    footer ul li {
-      list-style-type: none;
-      font-size: 3vw;
-      margin-bottom: 2%; }
-
 /*#region Menu*/
 .menu {
   display: table; }
-
-.menu a {
-  text-decoration: none;
-  display: table-cell;
-  vertical-align: middle;
-  font-size: 7VW;
-  color: black;
-  padding-right: 18%; }
-
-.fa-arrow-left {
-  margin-left: 50%; }
+  .menu a {
+    text-decoration: none;
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 7VW;
+    color: black;
+    padding-right: 18%; }
+  .menu .fa-arrow-left {
+    margin-left: 50%; }
 
 #images_menu img {
   border-radius: inherit; }
-
-#titre {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-left: 3%;
-  margin-right: 3%; }
 
 .propositions {
   background-color: #ececec;
   border-radius: 30px 30px 0px 0px;
   position: relative;
   top: -45px;
-  z-index: 1; }
-
-.propositions h2 {
-  font-size: 7vw;
-  margin-bottom: 3%; }
+  z-index: 1;
+  overflow: hidden; }
+  .propositions #titre {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 3%;
+    margin-right: 3%; }
+    .propositions #titre h2 {
+      font-size: 7vw;
+      margin-bottom: 3%; }
 
 .propositions i {
   font-size: 6vw;
@@ -332,8 +339,20 @@ footer {
   grid-template-rows: 50 50;
   grid-template-columns: 6fr 1fr;
   margin-bottom: 3%;
-  box-shadow: 0px 3px 10px grey;
-  overflow: hidden; }
+  box-shadow: 0px 3px 10px grey; }
+  .propositions li .intitule {
+    margin-left: 2%; }
+  .propositions li h4 {
+    margin-bottom: 1%;
+    font-size: 5vw;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    margin-top: 5px; }
   .propositions li .prix {
     margin: 10px;
     font-size: 3vw;
@@ -344,6 +363,18 @@ footer {
     grid-column-end: 3;
     display: flex;
     justify-content: center; }
+  .propositions li .descriptif {
+    margin-bottom: 1%;
+    font-size: 4vw;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    margin-top: 5px;
+    margin-left: 2%; }
 
 .propositions ul {
   margin-right: 2%;
@@ -359,34 +390,6 @@ footer {
   border-bottom: 4px solid #99E2D0;
   width: 10%; }
 
-.propositions h4 {
-  margin-bottom: 1%;
-  font-size: 5vw;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  grid-row-start: 1;
-  grid-row-end: 2;
-  grid-column-start: 1;
-  grid-column-end: 2;
-  margin-top: 5px; }
-
-.propositions .descriptif {
-  margin-bottom: 1%;
-  font-size: 4vw;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  grid-row-start: 2;
-  grid-row-end: 3;
-  grid-column-start: 1;
-  grid-column-end: 2;
-  margin-top: 5px;
-  margin-left: 2%; }
-
-.propositions .intitule {
-  margin-left: 2%; }
-
 .bouton_deux {
   background-image: linear-gradient(#FF79DA 35%, #9356DC);
   border: 0px solid;
@@ -401,11 +404,11 @@ footer {
   padding-right: 8%;
   margin-top: 10%;
   margin-bottom: 20%;
-  margin-left: 25%; }
-
-.bouton_deux:hover {
-  background: linear-gradient(to bottom, #ff93e1, #a16be0);
-  box-shadow: 0px 4px 15px grey; }
+  margin-left: 25%;
+  outline-style: none; }
+  .bouton_deux:active {
+    background: linear-gradient(to bottom, #ff93e1, #a16be0);
+    box-shadow: 0px 3px 10px grey; }
 
 .propositions li:hover {
   padding-right: 0.5rem;
@@ -426,7 +429,8 @@ li:hover .far.fa-check-circle {
   bottom: 28%;
   visibility: hidden;
   transition: transform 500ms;
-  transform: rotate(0); }
+  transform: rotate(0);
+  width: fit-content; }
 
 #entree {
   animation: anim 0.5s linear forwards 0.5s;
@@ -448,7 +452,9 @@ li:hover .far.fa-check-circle {
 
 /*#endregion Menu*/
 /*#Region Media Queries*/
-@media (min-width: 801px) {
+@media (min-width: 801px) and (max-width: 1023px) {
+  body {
+    padding: 1%; }
   #section_media {
     display: flex;
     flex-direction: row;
@@ -461,6 +467,12 @@ li:hover .far.fa-check-circle {
     border-top: none; }
     .localisation i {
       font-size: 3vw; }
+  .fa-arrow-left {
+    font-size: 5vw;
+    display: flex;
+    align-items: center; }
+  .menu h1 {
+    margin-left: 7%; }
   #entete {
     width: 50%;
     background-color: rgba(236, 236, 236, 0.4);
@@ -468,13 +480,17 @@ li:hover .far.fa-check-circle {
     box-shadow: 0px 3px 10px; }
     #entete h2 {
       font-size: 4vw; }
-    #entete p, #entete .bouton {
+    #entete p {
       font-size: 3vw;
-      margin-top: 3%; }
+      margin-top: 0;
+      border-radius: 22px 22px 0 0; }
+    #entete .bouton {
+      margin-top: 3%;
+      font-size: 3vw; }
   #fonctionnement {
     margin-left: 3%;
     width: 50%;
-    background-color: rgba(236, 236, 236, 0.4);
+    background-color: white;
     border-radius: 5%;
     padding-left: 1%;
     box-shadow: 0px 3px 10px; }
@@ -490,7 +506,7 @@ li:hover .far.fa-check-circle {
     box-shadow: 0px 1px 4px;
     margin-bottom: 5%; }
   #violet {
-    background-color: #99E2D0;
+    background-color: rgba(147, 86, 220, 0.2);
     box-shadow: 0px 1px 4px; }
   #section_media2 {
     display: grid;
@@ -520,69 +536,149 @@ li:hover .far.fa-check-circle {
     grid-row-end: 3;
     grid-column-start: 2;
     grid-column-end: 3; }
-  #Restaurants {
-    margin-left: 1%;
-    margin-right: 1%; }
-    #Restaurants h3 {
-      padding-top: 20px;
-      margin-left: 4%;
-      margin: 2%;
-      font-size: 5vw; }
-    #Restaurants a {
-      width: 100%; }
-  figcaption h4 {
+  #Restaurants figcaption .lieu {
+    margin-left: 2%;
+    font-size: 3vw;
+    padding-bottom: 1%; }
+  #Restaurants figcaption h4 {
+    margin-left: 2%;
+    font-size: 3vw;
+    padding-bottom: 1%; }
+  #Restaurants h3 {
+    padding-top: 20px;
+    margin: 3%;
+    font-size: 5vw; }
+  #Restaurants figcaption .fa {
+    bottom: 5%;
     font-size: 4vw; }
-    figcaption h4 p {
-      font-size: 3vw; }
-    figcaption h4 i {
-      font-size: 3vw; } }
+  #entree {
+    display: flex; }
+    #entree h4 {
+      font-size: 2vw; }
+    #entree .descriptif {
+      font-size: 1.5vw; }
+    #entree .prix {
+      font-size: 2vw; }
+  #plats {
+    display: flex; }
+    #plats h4 {
+      font-size: 2vw; }
+    #plats .descriptif {
+      font-size: 1.5vw; }
+    #plats .prix {
+      font-size: 2vw; }
+  #desserts {
+    display: flex; }
+    #desserts h4 {
+      font-size: 2vw; }
+    #desserts .descriptif {
+      font-size: 1.5vw; }
+    #desserts .prix {
+      font-size: 2vw; }
+  .propositions ul {
+    padding-left: 15%; }
+    .propositions ul li {
+      grid-auto-rows: 50%; }
+      .propositions ul li h4 {
+        margin-top: 2%; }
+  .propositions h3 {
+    padding-top: 9%; }
+  .far.fa-check-circle {
+    right: -25%;
+    bottom: 22%;
+    font-size: 4vw; }
+  .bouton_deux {
+    padding: 2%;
+    font-size: 3vw;
+    margin-left: 36%; } }
 
-@media (min-width: 801px) and (min-width: 1024px) {
+@media (min-width: 1024px) {
   #section_media {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    padding: 1%; }
   h1 {
-    font-size: 8vw;
-    margin-bottom: 2%;
-    margin-top: 0%; }
+    font-size: 7vw;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0; }
+  .menu h1 {
+    margin-left: 65%; }
+    .menu h1 .fas {
+      font-size: 4vw;
+      display: flex;
+      align-items: center; }
   #entete {
     width: 100%;
     padding-bottom: 3%;
     border-radius: 30px;
-    margin-bottom: 6%; }
+    margin-bottom: 6%;
+    box-shadow: 0px 4px 10px #aaa; }
+    #entete h2 {
+      font-size: 5vw; }
+    #entete p {
+      font-size: 3vw; }
     #entete .localisation {
       font-size: 3vw;
       margin-top: 0;
       border-radius: 25px 25px 0 0; }
     #entete .bouton {
-      padding: 2%; }
+      padding: 2%;
+      font-size: 2vw; }
   #fonctionnement {
     width: 99%;
     margin-left: 0;
     margin-right: 2%;
     border-radius: 25px;
-    padding-left: 0; }
+    padding-left: 0;
+    background-color: white;
+    border-radius: 25px 25px 0 0;
+    box-shadow: 0px 4px 10px #aaa; }
     #fonctionnement h3 {
-      margin-top: 0%;
-      margin-bottom: 1%;
-      margin-left: 0;
-      padding-left: 0;
-      padding-top: 1%;
-      padding-bottom: 1%;
-      background-color: rgba(48, 48, 48, 0.123);
-      border-radius: 25px 25px 0 0; }
+      margin-top: 2%;
+      font-size: 5vw;
+      text-align: center;
+      margin-bottom: 1%; }
     #fonctionnement ol {
       display: flex; }
-  .fonction .number {
-    width: 21%;
-    height: 21%;
-    padding-top: 2%;
-    padding-bottom: 0%;
-    margin-left: -7%; }
+      #fonctionnement ol li {
+        font-size: 2.5vw; }
+        #fonctionnement ol li .number {
+          padding: 2%;
+          width: 45px;
+          height: 30px; }
   .fonction li:hover {
     background: #71d7be; }
   #violet:hover {
     background: #71d7be; }
+  #section_media2 {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 50% 50%; }
+    #section_media2 h4 {
+      font-size: 4vw; }
+    #section_media2 p {
+      font-size: 3vw; }
+  .un {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2; }
+  .deux {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2; }
+  .trois {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3; }
+  .quatre {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3; }
   #section_media2 h4 {
     font-size: 3vw; }
   #section_media2 .lieu {
@@ -590,13 +686,22 @@ li:hover .far.fa-check-circle {
   figure .fa-heart {
     font-size: 3vw; }
   #Restaurants h3 {
-    font-size: 4vw; }
+    font-size: 3vw; }
+  #Restaurants figcaption h4 {
+    margin-left: 2%;
+    font-size: 3vw; }
+  #Restaurants figcaption .lieu {
+    margin-left: 2%;
+    font-size: 2vw; }
+  #Restaurants figcaption .lieu {
+    margin-left: 2%;
+    font-size: 3vw; }
   .far.fa-check-circle {
     position: absolute;
     visibility: hidden;
     transition: transform 500ms;
     transform: rotate(0);
-    left: -14%;
+    left: -15%;
     font-size: 2em;
     top: 30%; }
   .propositions li {
@@ -612,16 +717,20 @@ li:hover .far.fa-check-circle {
     color: white;
     transform: rotate(360deg);
     transform-origin: center; }
-  .propositions h4 {
-    font-size: 1.5em; }
+  .propositions li .intitule {
+    font-size: 0.9em;
+    margin-top: 10px; }
   .propositions h3 {
     font-size: 3vw; }
-  .propositions h2 {
-    font-size: 4vw; }
+  .propositions #titre h2 {
+    font-size: 5vw;
+    margin-bottom: 3%; }
   .propositions i {
-    font-size: 4vw; }
-  .propositions .descriptif {
-    font-size: 1em;
+    font-size: 4vw;
+    position: absolute;
+    top: 7%; }
+  .propositions li .descriptif {
+    font-size: 0.8em;
     align-items: center;
     display: flex; }
   .propositions li .prix {
@@ -645,13 +754,70 @@ li:hover .far.fa-check-circle {
     grid-row-start: 1;
     grid-row-end: 2;
     grid-column-start: 3;
-    grid-column-end: 4; } }
-
-@media (min-width: 801px) {
+    grid-column-end: 4; }
+  footer {
+    width: 100%; }
+    footer h4 {
+      display: flex;
+      justify-content: center;
+      padding-left: 0;
+      margin-bottom: 2%; }
+    footer ul {
+      padding-left: 6%;
+      padding-bottom: 4%;
+      display: flex;
+      justify-content: space-around;
+      padding-left: 0; }
+      footer ul li {
+        display: flex;
+        list-style-type: none;
+        font-size: 2vw;
+        margin-bottom: 2%; }
+  .bouton {
+    background-image: linear-gradient(#FF79DA 35%, #9356DC);
+    border: 0px solid;
+    border-radius: 50px;
+    padding: 3%;
+    color: white;
+    font-size: 5vw;
+    box-shadow: 0px 3px 10px grey; }
+    .bouton:hover {
+      background: linear-gradient(to bottom, #ff93e1, #a16be0);
+      box-shadow: 0px 4px 15px grey; }
+  .fa-heart {
+    position: absolute;
+    right: 5%;
+    bottom: 7%;
+    font-size: 5vw;
+    font-weight: 500;
+    background-size: 0%;
+    background: #494949;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; }
+    .fa-heart:hover {
+      content: "\f004";
+      font-weight: 900;
+      background: linear-gradient(to top, #e72c83 0%, #a742c6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: remplissage 2s; }
   .bouton_deux {
-    padding: 2%;
+    background-image: linear-gradient(#FF79DA 35%, #9356DC);
+    border: 0px solid;
+    border-radius: 50px;
+    padding: 3%;
+    color: white;
+    font-size: 5vw;
+    box-shadow: 0px 3px 10px grey;
     font-size: 2vw;
-    margin-left: 39%;
-    margin-bottom: 5%;
-    margin-top: 0; }
-  /*endregion*/ }
+    padding: 2%;
+    text-align: center;
+    margin: 5%;
+    margin-left: 42%;
+    display: flex;
+    justify-content: center; }
+    .bouton_deux:hover {
+      background: linear-gradient(to bottom, #ff93e1, #a16be0);
+      box-shadow: 0px 4px 15px grey; } }
+
+/*#endRegion Media Queries*/
