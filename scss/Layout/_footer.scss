@@ -21,5 +21,30 @@ footer{
             font-size:3vw;
             margin-bottom: 2%;
           }
+      }
+}
+
+@media (min-width:1024px) and (max-width:1700px){
+  footer{
+    width:100%;
+    h4{
+        display:flex;
+        justify-content:center;
+        padding-left:0;
+        margin-bottom:2%;
+    }
+    ul {
+        padding-left: 6%;
+        padding-bottom: 4%;
+        display: flex;
+        justify-content: space-around;
+        padding-left: 0;
+        li{
+          display:flex;
+          list-style-type: none;
+          font-size: 2vw;
+          margin-bottom: 2%;
+        }
+      }
   }
 }

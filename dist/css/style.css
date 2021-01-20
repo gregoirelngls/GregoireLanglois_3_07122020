@@ -7,17 +7,10 @@ body {
   font-family: 'Shrikhand', arial, serif; }
 
 .bouton {
-  outline-style: none;
-  background-image: linear-gradient(#FF79DA 35%, #9356DC);
-  border: 0px solid;
-  border-radius: 50px;
-  padding: 3%;
-  color: white;
-  font-size: 5vw;
-  box-shadow: 0px 3px 10px grey; }
-  .bouton:active {
+  outline-style: none; }
+  .bouton:active:active {
     background: linear-gradient(to bottom, #ff93e1, #a16be0);
-    box-shadow: 0px 4px 15px grey; }
+    box-shadow: 0px 3px 10px grey; }
 
 .bouton_deux {
   background-image: linear-gradient(#FF79DA 35%, #9356DC);
@@ -35,6 +28,9 @@ body {
   margin-bottom: 20%;
   margin-left: 25%;
   outline-style: none; }
+  .bouton_deux:active, .bouton_deux:hover {
+    background: linear-gradient(to bottom, #ff93e1, #a16be0);
+    box-shadow: 0px 4px 15px grey; }
   .bouton_deux:active {
     background: linear-gradient(to bottom, #ff93e1, #a16be0);
     box-shadow: 0px 3px 10px grey; }
@@ -59,6 +55,26 @@ footer {
       list-style-type: none;
       font-size: 3vw;
       margin-bottom: 2%; }
+
+@media (min-width: 1024px) and (max-width: 1700px) {
+  footer {
+    width: 100%; }
+    footer h4 {
+      display: flex;
+      justify-content: center;
+      padding-left: 0;
+      margin-bottom: 2%; }
+    footer ul {
+      padding-left: 6%;
+      padding-bottom: 4%;
+      display: flex;
+      justify-content: space-around;
+      padding-left: 0; }
+      footer ul li {
+        display: flex;
+        list-style-type: none;
+        font-size: 2vw;
+        margin-bottom: 2%; } }
 
 #section_principale {
   animation: 2.5s fadeIn;
@@ -166,7 +182,7 @@ h1 {
   color: white;
   font-size: 5vw;
   box-shadow: 0px 3px 10px grey; }
-  .bouton:active {
+  .bouton:active, .bouton:hover {
     background: linear-gradient(to bottom, #ff93e1, #a16be0);
     box-shadow: 0px 4px 15px grey; }
 
@@ -231,7 +247,7 @@ figure {
   figure .new {
     position: absolute;
     float: right;
-    top: 15px;
+    top: 25px;
     right: 15px;
     background-color: #99E2D0;
     color: green;
@@ -290,6 +306,220 @@ li a {
   text-decoration: none;
   color: white; }
 
+/*#Region Media Queries*/
+@media (min-width: 801px) and (max-width: 1023px) {
+  body {
+    padding: 1%; }
+  #section_media {
+    display: flex;
+    flex-direction: row;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-bottom: 4%; }
+  .localisation {
+    box-shadow: none;
+    font-size: 5vw;
+    border-top: none; }
+    .localisation i {
+      font-size: 3vw; }
+  .menu h1 {
+    margin-left: 7%; }
+  #entete {
+    width: 50%;
+    background-color: rgba(236, 236, 236, 0.4);
+    border-radius: 5%;
+    box-shadow: 0px 3px 10px; }
+    #entete h2 {
+      font-size: 4vw; }
+    #entete p {
+      font-size: 3vw;
+      margin-top: 0;
+      border-radius: 22px 22px 0 0; }
+    #entete .bouton {
+      margin-top: 3%;
+      font-size: 3vw; }
+  #fonctionnement {
+    margin-left: 3%;
+    width: 50%;
+    background-color: white;
+    border-radius: 5%;
+    padding-left: 1%;
+    box-shadow: 0px 3px 10px; }
+    #fonctionnement h3 {
+      font-size: 3vw;
+      display: flex;
+      justify-content: center;
+      margin-top: 3%; }
+  .fonction p, i {
+    font-size: 3vw; }
+  .fonction li {
+    background-color: #99E2D0;
+    box-shadow: 0px 1px 4px;
+    margin-bottom: 5%; }
+  #violet {
+    background-color: rgba(147, 86, 220, 0.2);
+    box-shadow: 0px 1px 4px; }
+  #section_media2 {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 50% 50%; }
+    #section_media2 h4 {
+      font-size: 4vw; }
+    #section_media2 p {
+      font-size: 3vw; }
+  .un {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2; }
+  .deux {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2; }
+  .trois {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3; }
+  .quatre {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3; }
+  #Restaurants figcaption .lieu {
+    margin-left: 2%;
+    font-size: 3vw;
+    padding-bottom: 1%; }
+  #Restaurants figcaption h4 {
+    margin-left: 2%;
+    font-size: 3vw;
+    padding-bottom: 1%; }
+  #Restaurants h3 {
+    padding-top: 20px;
+    margin: 3%;
+    font-size: 5vw; }
+  #Restaurants figcaption .fa {
+    bottom: 5%;
+    font-size: 4vw; } }
+
+@media (min-width: 1024px) and (max-width: 1700px) {
+  #section_media {
+    display: flex;
+    flex-direction: row;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-bottom: 4%;
+    justify-content: space-around; }
+  h1 {
+    font-size: 7vw;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0; }
+  .menu h1 {
+    margin-left: 65%; }
+    .menu h1 .fas {
+      font-size: 4vw;
+      display: flex;
+      align-items: center; }
+  #entete {
+    width: 45%;
+    padding-bottom: 3%;
+    border-radius: 30px;
+    box-shadow: 0px 4px 10px #aaa; }
+    #entete h2 {
+      font-size: 3vw; }
+    #entete p {
+      font-size: 3vw; }
+    #entete .localisation {
+      font-size: 3vw;
+      margin-top: 0;
+      border-radius: 25px 25px 0 0; }
+      #entete .localisation i {
+        font-size: 3vw; }
+    #entete .bouton {
+      padding: 2%;
+      font-size: 2vw; }
+  #fonctionnement {
+    width: 45%;
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 25px;
+    padding-left: 0;
+    background-color: white;
+    box-shadow: 0px 4px 10px #aaa; }
+    #fonctionnement h3 {
+      margin-top: 2%;
+      font-size: 4vw;
+      text-align: center;
+      margin-bottom: 1%; }
+    #fonctionnement ol {
+      display: flex;
+      flex-direction: column; }
+      #fonctionnement ol li {
+        font-size: 2vw;
+        width: 75%;
+        padding-left: 5%;
+        margin-left: 10%; }
+        #fonctionnement ol li .number {
+          padding: 2%;
+          width: 30px;
+          height: 30px; }
+  .fonction li:hover {
+    background: #71d7be; }
+  #violet:hover {
+    background: #71d7be; }
+  #section_media2 {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 50% 50%; }
+    #section_media2 h4 {
+      font-size: 4vw; }
+    #section_media2 p {
+      font-size: 3vw; }
+  .un {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2; }
+  .deux {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2; }
+  .trois {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3; }
+  .quatre {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3; }
+  #section_media2 h4 {
+    font-size: 3vw; }
+  #section_media2 .lieu {
+    font-size: 2vw; }
+  figure .fa-heart {
+    font-size: 3vw; }
+  #Restaurants h3 {
+    font-size: 4vw; }
+  #Restaurants figcaption h4 {
+    margin-left: 2%;
+    font-size: 2vw; }
+  #Restaurants figcaption .lieu {
+    margin-left: 2%;
+    font-size: 2vw; }
+  #Restaurants h4 {
+    margin-left: 2%;
+    font-size: 2vw; }
+  #Restaurants .new {
+    font-size: 2vw; }
+  #Restaurants .fa {
+    font-size: 2vw; } }
+
+/*#endRegion Media Queries*/
 /*#region Menu*/
 .menu {
   display: table; }
@@ -406,18 +636,21 @@ li a {
   margin-bottom: 20%;
   margin-left: 25%;
   outline-style: none; }
+  .bouton_deux:active, .bouton_deux:hover {
+    background: linear-gradient(to bottom, #ff93e1, #a16be0);
+    box-shadow: 0px 4px 15px grey; }
   .bouton_deux:active {
     background: linear-gradient(to bottom, #ff93e1, #a16be0);
     box-shadow: 0px 3px 10px grey; }
 
-.propositions li:hover {
+.propositions li:active {
   padding-right: 0.5rem;
   border-right: 15vw solid #99E2D0;
-  transition-duration: 500ms;
+  transition-duration: 800ms;
   position: relative;
   overflow: visible; }
 
-li:hover .far.fa-check-circle {
+li:active .far.fa-check-circle {
   visibility: visible;
   color: white;
   transform: rotate(360deg);
@@ -425,10 +658,10 @@ li:hover .far.fa-check-circle {
 
 .far.fa-check-circle {
   position: absolute;
-  right: -15%;
+  right: -16%;
   bottom: 28%;
   visibility: hidden;
-  transition: transform 500ms;
+  transition: transform 1500ms;
   transform: rotate(0);
   width: fit-content; }
 
@@ -453,104 +686,10 @@ li:hover .far.fa-check-circle {
 /*#endregion Menu*/
 /*#Region Media Queries*/
 @media (min-width: 801px) and (max-width: 1023px) {
-  body {
-    padding: 1%; }
-  #section_media {
-    display: flex;
-    flex-direction: row;
-    padding-left: 1%;
-    padding-right: 1%;
-    padding-bottom: 4%; }
-  .localisation {
-    box-shadow: none;
-    font-size: 5vw;
-    border-top: none; }
-    .localisation i {
-      font-size: 3vw; }
   .fa-arrow-left {
     font-size: 5vw;
     display: flex;
     align-items: center; }
-  .menu h1 {
-    margin-left: 7%; }
-  #entete {
-    width: 50%;
-    background-color: rgba(236, 236, 236, 0.4);
-    border-radius: 5%;
-    box-shadow: 0px 3px 10px; }
-    #entete h2 {
-      font-size: 4vw; }
-    #entete p {
-      font-size: 3vw;
-      margin-top: 0;
-      border-radius: 22px 22px 0 0; }
-    #entete .bouton {
-      margin-top: 3%;
-      font-size: 3vw; }
-  #fonctionnement {
-    margin-left: 3%;
-    width: 50%;
-    background-color: white;
-    border-radius: 5%;
-    padding-left: 1%;
-    box-shadow: 0px 3px 10px; }
-    #fonctionnement h3 {
-      font-size: 3vw;
-      display: flex;
-      justify-content: center;
-      margin-top: 3%; }
-  .fonction p, i {
-    font-size: 3vw; }
-  .fonction li {
-    background-color: #99E2D0;
-    box-shadow: 0px 1px 4px;
-    margin-bottom: 5%; }
-  #violet {
-    background-color: rgba(147, 86, 220, 0.2);
-    box-shadow: 0px 1px 4px; }
-  #section_media2 {
-    display: grid;
-    grid-template-columns: 2fr 2fr;
-    grid-template-rows: 50% 50%; }
-    #section_media2 h4 {
-      font-size: 4vw; }
-    #section_media2 p {
-      font-size: 3vw; }
-  .un {
-    grid-row-start: 1;
-    grid-row-end: 2;
-    grid-column-start: 1;
-    grid-column-end: 2; }
-  .deux {
-    grid-row-start: 2;
-    grid-row-end: 3;
-    grid-column-start: 1;
-    grid-column-end: 2; }
-  .trois {
-    grid-row-start: 1;
-    grid-row-end: 2;
-    grid-column-start: 2;
-    grid-column-end: 3; }
-  .quatre {
-    grid-row-start: 2;
-    grid-row-end: 3;
-    grid-column-start: 2;
-    grid-column-end: 3; }
-  #Restaurants figcaption .lieu {
-    margin-left: 2%;
-    font-size: 3vw;
-    padding-bottom: 1%; }
-  #Restaurants figcaption h4 {
-    margin-left: 2%;
-    font-size: 3vw;
-    padding-bottom: 1%; }
-  #Restaurants h3 {
-    padding-top: 20px;
-    margin: 3%;
-    font-size: 5vw; }
-  #Restaurants figcaption .fa {
-    bottom: 5%;
-    font-size: 4vw; }
   #entree {
     display: flex; }
     #entree h4 {
@@ -575,6 +714,8 @@ li:hover .far.fa-check-circle {
       font-size: 1.5vw; }
     #desserts .prix {
       font-size: 2vw; }
+  .propositions li:active {
+    border-right: 9vw solid #99E2D0; }
   .propositions ul {
     padding-left: 15%; }
     .propositions ul li {
@@ -584,118 +725,15 @@ li:hover .far.fa-check-circle {
   .propositions h3 {
     padding-top: 9%; }
   .far.fa-check-circle {
-    right: -25%;
+    right: -18%;
     bottom: 22%;
     font-size: 4vw; }
   .bouton_deux {
     padding: 2%;
     font-size: 3vw;
-    margin-left: 36%; } }
+    margin-left: 40%; } }
 
-@media (min-width: 1024px) {
-  #section_media {
-    display: flex;
-    flex-direction: column;
-    padding: 1%; }
-  h1 {
-    font-size: 7vw;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 0; }
-  .menu h1 {
-    margin-left: 65%; }
-    .menu h1 .fas {
-      font-size: 4vw;
-      display: flex;
-      align-items: center; }
-  #entete {
-    width: 100%;
-    padding-bottom: 3%;
-    border-radius: 30px;
-    margin-bottom: 6%;
-    box-shadow: 0px 4px 10px #aaa; }
-    #entete h2 {
-      font-size: 5vw; }
-    #entete p {
-      font-size: 3vw; }
-    #entete .localisation {
-      font-size: 3vw;
-      margin-top: 0;
-      border-radius: 25px 25px 0 0; }
-    #entete .bouton {
-      padding: 2%;
-      font-size: 2vw; }
-  #fonctionnement {
-    width: 99%;
-    margin-left: 0;
-    margin-right: 2%;
-    border-radius: 25px;
-    padding-left: 0;
-    background-color: white;
-    border-radius: 25px 25px 0 0;
-    box-shadow: 0px 4px 10px #aaa; }
-    #fonctionnement h3 {
-      margin-top: 2%;
-      font-size: 5vw;
-      text-align: center;
-      margin-bottom: 1%; }
-    #fonctionnement ol {
-      display: flex; }
-      #fonctionnement ol li {
-        font-size: 2.5vw; }
-        #fonctionnement ol li .number {
-          padding: 2%;
-          width: 45px;
-          height: 30px; }
-  .fonction li:hover {
-    background: #71d7be; }
-  #violet:hover {
-    background: #71d7be; }
-  #section_media2 {
-    display: grid;
-    grid-template-columns: 2fr 2fr;
-    grid-template-rows: 50% 50%; }
-    #section_media2 h4 {
-      font-size: 4vw; }
-    #section_media2 p {
-      font-size: 3vw; }
-  .un {
-    grid-row-start: 1;
-    grid-row-end: 2;
-    grid-column-start: 1;
-    grid-column-end: 2; }
-  .deux {
-    grid-row-start: 2;
-    grid-row-end: 3;
-    grid-column-start: 1;
-    grid-column-end: 2; }
-  .trois {
-    grid-row-start: 1;
-    grid-row-end: 2;
-    grid-column-start: 2;
-    grid-column-end: 3; }
-  .quatre {
-    grid-row-start: 2;
-    grid-row-end: 3;
-    grid-column-start: 2;
-    grid-column-end: 3; }
-  #section_media2 h4 {
-    font-size: 3vw; }
-  #section_media2 .lieu {
-    font-size: 2vw; }
-  figure .fa-heart {
-    font-size: 3vw; }
-  #Restaurants h3 {
-    font-size: 3vw; }
-  #Restaurants figcaption h4 {
-    margin-left: 2%;
-    font-size: 3vw; }
-  #Restaurants figcaption .lieu {
-    margin-left: 2%;
-    font-size: 2vw; }
-  #Restaurants figcaption .lieu {
-    margin-left: 2%;
-    font-size: 3vw; }
+@media (min-width: 1024px) and (max-width: 1700px) {
   .far.fa-check-circle {
     position: absolute;
     visibility: hidden;
@@ -708,7 +746,7 @@ li:hover .far.fa-check-circle {
     width: 80%; }
   .propositions li:hover {
     padding-right: 0.5rem;
-    border-LEFT: 5vw solid #99E2D0;
+    border-left: 5vw solid #99E2D0;
     border-right: none;
     transition-duration: 500ms;
     position: relative; }
@@ -721,14 +759,14 @@ li:hover .far.fa-check-circle {
     font-size: 0.9em;
     margin-top: 10px; }
   .propositions h3 {
-    font-size: 3vw; }
+    font-size: 2vw; }
   .propositions #titre h2 {
     font-size: 5vw;
     margin-bottom: 3%; }
   .propositions i {
     font-size: 4vw;
     position: absolute;
-    top: 7%; }
+    top: 10%; }
   .propositions li .descriptif {
     font-size: 0.8em;
     align-items: center;
@@ -755,24 +793,6 @@ li:hover .far.fa-check-circle {
     grid-row-end: 2;
     grid-column-start: 3;
     grid-column-end: 4; }
-  footer {
-    width: 100%; }
-    footer h4 {
-      display: flex;
-      justify-content: center;
-      padding-left: 0;
-      margin-bottom: 2%; }
-    footer ul {
-      padding-left: 6%;
-      padding-bottom: 4%;
-      display: flex;
-      justify-content: space-around;
-      padding-left: 0; }
-      footer ul li {
-        display: flex;
-        list-style-type: none;
-        font-size: 2vw;
-        margin-bottom: 2%; }
   .bouton {
     background-image: linear-gradient(#FF79DA 35%, #9356DC);
     border: 0px solid;
@@ -781,7 +801,7 @@ li:hover .far.fa-check-circle {
     color: white;
     font-size: 5vw;
     box-shadow: 0px 3px 10px grey; }
-    .bouton:hover {
+    .bouton:active, .bouton:hover {
       background: linear-gradient(to bottom, #ff93e1, #a16be0);
       box-shadow: 0px 4px 15px grey; }
   .fa-heart {
@@ -816,6 +836,9 @@ li:hover .far.fa-check-circle {
     margin-left: 42%;
     display: flex;
     justify-content: center; }
+    .bouton_deux:active, .bouton_deux:hover {
+      background: linear-gradient(to bottom, #ff93e1, #a16be0);
+      box-shadow: 0px 4px 15px grey; }
     .bouton_deux:hover {
       background: linear-gradient(to bottom, #ff93e1, #a16be0);
       box-shadow: 0px 4px 15px grey; } }
