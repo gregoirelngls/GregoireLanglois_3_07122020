@@ -1,0 +1,29 @@
+/*#region accueil*/
+h1{
+    text-align:center;
+    font-size:10vw;
+    margin-bottom: 2%;
+    margin-top: 0%;
+    @include center;
+}
+/*#endregion accueil*/
+
+
+/*#region Menu*/
+.menu{
+    display:table;
+    h1{
+        margin-left:55%;
+    }
+    a{
+        text-decoration: none;
+        display: table-cell;
+        vertical-align: middle;
+        font-size: 7VW;
+        color: black;
+    }
+    .fa-arrow-left{
+        margin-left:50%;
+    }
+}
+/*#endregion Menu*/
