@@ -41,7 +41,7 @@ img {
   margin-left: 25%; }
   .bouton_deux:active {
     background: linear-gradient(to bottom, #ff93e1, #a16be0);
-    box-shadow: 0 4px 15px grey; }
+    box-shadow: 0 5px 15px grey; }
   .bouton_deux:active {
     background: linear-gradient(to bottom, #ff93e1, #a16be0);
     box-shadow: 10px 20px 30px grey; }
@@ -217,7 +217,7 @@ h1 {
   box-shadow: 0px 3px 10px grey; }
   .bouton:active {
     background: linear-gradient(to bottom, #ff93e1, #a16be0);
-    box-shadow: 0 4px 15px grey; }
+    box-shadow: 0 5px 15px grey; }
 
 .fonction {
   width: 100%; }
@@ -657,7 +657,7 @@ li a {
   outline-style: none; }
   .bouton_deux:active {
     background: linear-gradient(to bottom, #ff93e1, #a16be0);
-    box-shadow: 0 4px 15px grey; }
+    box-shadow: 0 5px 15px grey; }
   .bouton_deux:active {
     background: linear-gradient(to bottom, #ff93e1, #a16be0);
     box-shadow: 0px 3px 15px grey; }
