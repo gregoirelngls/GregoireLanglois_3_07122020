@@ -20,7 +20,7 @@ img {
 
 .bouton {
   outline-style: none; }
-  .bouton:active:active {
+  .bouton:hover:hover {
     background: linear-gradient(to bottom, #ff93e1, #a16be0);
     box-shadow: 0 5px 20px grey; }
 
@@ -39,10 +39,10 @@ img {
   margin-top: 10%;
   margin-bottom: 20%;
   margin-left: 25%; }
-  .bouton_deux:active {
+  .bouton_deux:hover {
     background: linear-gradient(to bottom, #ff93e1, #a16be0);
     box-shadow: 0 5px 15px grey; }
-  .bouton_deux:active {
+  .bouton_deux:hover {
     background: linear-gradient(to bottom, #ff93e1, #a16be0);
     box-shadow: 10px 20px 30px grey; }
 
@@ -215,7 +215,7 @@ h1 {
   color: white;
   font-size: 5vw;
   box-shadow: 0px 3px 10px grey; }
-  .bouton:active {
+  .bouton:hover {
     background: linear-gradient(to bottom, #ff93e1, #a16be0);
     box-shadow: 0 5px 15px grey; }
 
@@ -281,14 +281,14 @@ figure {
   figure .fa-heart {
     position: absolute;
     right: 5%;
-    bottom: 7%;
+    bottom: 5%;
     font-size: 5vw;
     font-weight: 500;
     background-size: 0%;
     background: #494949;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; }
-    figure .fa-heart:active {
+    figure .fa-heart:hover {
       content: "\f004";
       font-weight: 900;
       background: linear-gradient(to top, #e72c83 0%, #a742c6 100%);
@@ -655,14 +655,14 @@ li a {
   margin-bottom: 20%;
   margin-left: 25%;
   outline-style: none; }
-  .bouton_deux:active {
+  .bouton_deux:hover {
     background: linear-gradient(to bottom, #ff93e1, #a16be0);
     box-shadow: 0 5px 15px grey; }
-  .bouton_deux:active {
+  .bouton_deux:hover {
     background: linear-gradient(to bottom, #ff93e1, #a16be0);
     box-shadow: 0px 3px 15px grey; }
 
-.propositions li:active {
+.propositions li:hover {
   padding-right: 0.5rem;
   border-right: 15vw solid #99E2D0;
   transition-duration: 800ms;
@@ -670,7 +670,7 @@ li a {
   position: relative;
   overflow: visible; }
 
-li:active .far.fa-check-circle {
+li:hover .far.fa-check-circle {
   visibility: visible;
   color: white;
   transform: rotate(360deg);
@@ -743,7 +743,7 @@ li:active .far.fa-check-circle {
       font-size: 1.5vw; }
     #desserts .prix {
       font-size: 2vw; }
-  .propositions li:active {
+  .propositions li:hover {
     border-right: 9vw solid #99E2D0; }
   .propositions ul {
     padding-left: 15%;
@@ -769,13 +769,15 @@ li:active .far.fa-check-circle {
   .menu .fa-arrow-left {
     font-size: 4vw;
     vertical-align: middle; }
+  #images_menu img {
+    height: 40vh; }
   .far.fa-check-circle {
     position: absolute;
     visibility: hidden;
     transition: transform 500ms;
     transform: rotate(0);
-    left: -15%;
-    font-size: 2em;
+    left: -14%;
+    font-size: 2.1vw;
     top: 30%; }
   .propositions li {
     width: 83%; }
@@ -791,7 +793,7 @@ li:active .far.fa-check-circle {
     transform: rotate(360deg);
     transform-origin: center; }
   .propositions li .intitule {
-    font-size: 0.9em;
+    font-size: 1.3vw;
     margin-top: 10px; }
   .propositions h3 {
     font-size: 2vw; }
@@ -804,11 +806,11 @@ li:active .far.fa-check-circle {
     top: 10%;
     right: 2%; }
   .propositions li .descriptif {
-    font-size: 0.8em;
+    font-size: 1vw;
     align-items: center;
     display: flex; }
   .propositions li .prix {
-    font-size: 1em;
+    font-size: 1vw;
     padding-top: 14%; }
   .media_3 {
     display: grid;
@@ -836,6 +838,21 @@ li:active .far.fa-check-circle {
     margin-top: 3%; }
     .bouton_deux:hover {
       background: linear-gradient(to bottom, #ff93e1, #a16be0);
-      box-shadow: 0 5px 20px grey; } }
+      box-shadow: 0 5px 20px grey; }
+  footer h4 {
+    font-size: 2vw;
+    display: flex;
+    justify-content: center;
+    padding-left: 0; }
+  footer .fa-hands-helping {
+    margin-right: 2px;
+    padding-top: 0; }
+  footer ul {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 2%;
+    padding-left: 0; }
+    footer ul li {
+      font-size: 1.5vw; } }
 
 /*#endRegion Media Queries*/
