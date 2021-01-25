@@ -22,7 +22,7 @@ img {
   outline-style: none; }
   .bouton:active:active {
     background: linear-gradient(to bottom, #ff93e1, #a16be0);
-    box-shadow: 0px 5px 20px grey; }
+    box-shadow: 0 5px 20px grey; }
 
 .bouton_deux {
   background-image: linear-gradient(#FF79DA 35%, #9356DC);
@@ -41,7 +41,7 @@ img {
   margin-left: 25%; }
   .bouton_deux:active {
     background: linear-gradient(to bottom, #ff93e1, #a16be0);
-    box-shadow: px 4px 15px grey; }
+    box-shadow: 0 4px 15px grey; }
   .bouton_deux:active {
     background: linear-gradient(to bottom, #ff93e1, #a16be0);
     box-shadow: 10px 20px 30px grey; }
@@ -217,7 +217,7 @@ h1 {
   box-shadow: 0px 3px 10px grey; }
   .bouton:active {
     background: linear-gradient(to bottom, #ff93e1, #a16be0);
-    box-shadow: px 4px 15px grey; }
+    box-shadow: 0 4px 15px grey; }
 
 .fonction {
   width: 100%; }
@@ -427,7 +427,7 @@ li a {
     bottom: 5%;
     font-size: 4vw; } }
 
-@media (min-width: 1024px) and (max-width: 1700px) {
+@media (min-width: 1024px) {
   #section_media {
     display: flex;
     flex-direction: row;
@@ -462,7 +462,7 @@ li a {
       #entete .localisation i {
         font-size: 3vw; }
     #entete .bouton {
-      padding: 2%;
+      padding: 3%;
       font-size: 2vw; }
   #fonctionnement {
     width: 45%;
@@ -585,7 +585,7 @@ li a {
   border-radius: 20px;
   border-right: 0vw solid #99E2D0;
   display: grid;
-  grid-template-rows: 50 50;
+  grid-template-rows: 50% 50%;
   grid-template-columns: 6fr 1fr;
   margin-bottom: 3%;
   box-shadow: 0px 3px 15px grey; }
@@ -657,7 +657,7 @@ li a {
   outline-style: none; }
   .bouton_deux:active {
     background: linear-gradient(to bottom, #ff93e1, #a16be0);
-    box-shadow: px 4px 15px grey; }
+    box-shadow: 0 4px 15px grey; }
   .bouton_deux:active {
     background: linear-gradient(to bottom, #ff93e1, #a16be0);
     box-shadow: 0px 3px 15px grey; }
@@ -666,6 +666,7 @@ li a {
   padding-right: 0.5rem;
   border-right: 15vw solid #99E2D0;
   transition-duration: 800ms;
+  -moz-transition-duration: 800ms;
   position: relative;
   overflow: visible; }
 
@@ -745,7 +746,8 @@ li:active .far.fa-check-circle {
   .propositions li:active {
     border-right: 9vw solid #99E2D0; }
   .propositions ul {
-    padding-left: 15%; }
+    padding-left: 15%;
+    width: 50%; }
     .propositions ul li {
       grid-auto-rows: 50%; }
       .propositions ul li h4 {
@@ -761,7 +763,7 @@ li:active .far.fa-check-circle {
     font-size: 3vw;
     margin-left: 40%; } }
 
-@media (min-width: 1024px) and (max-width: 1700px) {
+@media (min-width: 1024px) {
   .menu h1 {
     margin-left: 115%; }
   .menu .fa-arrow-left {
@@ -834,6 +836,6 @@ li:active .far.fa-check-circle {
     margin-top: 3%; }
     .bouton_deux:hover {
       background: linear-gradient(to bottom, #ff93e1, #a16be0);
-      box-shadow: 0px 5px 20px grey; } }
+      box-shadow: 0 5px 20px grey; } }
 
 /*#endRegion Media Queries*/
