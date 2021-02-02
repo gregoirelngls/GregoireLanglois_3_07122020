@@ -708,7 +708,7 @@ li:hover .far.fa-check-circle::before {
 /*#Region Media Queries*/
 @media (min-width: 769px) and (max-width: 1023px) {
   img {
-    height: 25vh; }
+    height: 30vh; }
   .fa-arrow-left {
     font-size: 5vw;
     display: flex;
@@ -762,7 +762,7 @@ li:hover .far.fa-check-circle::before {
 
 @media (min-width: 1024px) {
   img {
-    height: 25vh; }
+    height: 35vh; }
   .menu h1 {
     margin-left: 115%; }
   .menu .fa-arrow-left {
