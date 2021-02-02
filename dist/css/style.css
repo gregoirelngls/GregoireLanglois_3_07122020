@@ -9,14 +9,11 @@ body {
 
 img {
   width: 100%;
-  height: 35vh;
+  height: 30vh;
   border-radius: 10px 10px 0% 0%;
   object-fit: cover;
   position: relative;
   top: 10px; }
-
-#images_menu img {
-  height: 300px; }
 
 .bouton {
   outline-style: none; }
@@ -708,7 +705,7 @@ li:hover .far.fa-check-circle::before {
 /*#Region Media Queries*/
 @media (min-width: 769px) and (max-width: 1023px) {
   img {
-    height: 30vh; }
+    height: 35vh; }
   .fa-arrow-left {
     font-size: 5vw;
     display: flex;
@@ -762,7 +759,7 @@ li:hover .far.fa-check-circle::before {
 
 @media (min-width: 1024px) {
   img {
-    height: 35vh; }
+    height: 40vh; }
   .menu h1 {
     margin-left: 115%; }
   .menu .fa-arrow-left {
@@ -776,8 +773,6 @@ li:hover .far.fa-check-circle::before {
     padding-bottom: 2%; }
   .propositions h3 {
     font-size: 2.5vw; }
-  #images_menu img {
-    height: 40vh; }
   .intitule {
     font-size: 1.5vw; }
   .descriptif {
