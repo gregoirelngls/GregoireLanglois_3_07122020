@@ -9,7 +9,7 @@ body {
 
 img {
   width: 100%;
-  height: 30vh;
+  height: 40vh;
   border-radius: 10px 10px 0% 0%;
   object-fit: cover;
   position: relative;
@@ -827,5 +827,9 @@ li:hover .far.fa-check-circle::before {
     padding-left: 0; }
     footer ul li {
       font-size: 1.5vw; } }
+
+@media (max-width: 550px) {
+  img {
+    height: 30vh; } }
 
 /*#endRegion Media Queries*/
